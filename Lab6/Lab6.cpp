@@ -126,9 +126,9 @@ void binaryIn(char input, ifstream& inFile, unsigned int& decVal, int& binarySiz
 	}
 }
 
-// "binaryOut" takes the information from binary in and detrmines and output. If the binary number was valid.
+// "binaryOut" takes the information from binary in and detrmines an output. If the binary number was valid.
 // A calculation is made to determine how many spaces will be outputted before the binary number to center 
-// it. Then the line is read in through the second ifstream and the binary number is outputted if it was
+// it. Then the line is read in through the second ifstream and the binary number is outputted, if it was
 // valid. If it was invalid an error message is displayed. This function primarily takes data in so it uses
 // mostly value parameters. The ifstream must be a reference parameter.
 void binaryOut(char input, int binarySize, bool valid, ifstream& inFile2)
@@ -141,10 +141,10 @@ void binaryOut(char input, int binarySize, bool valid, ifstream& inFile2)
 		binaryW = ((binarySize) / -2) + 17;
 
 	if (valid)
-		cout << setw(binaryW);            // The width is outputted
+		cout << setw(binaryW);            // The width is outputted.
 
 	inFile2.ignore(200, '1');             // The program will ignore anything that it isn't the first
-	input = '1';                          // digit of the binary number
+	input = '1';                          // digit of the binary number.
 
 	while (inFile2 && input != '\n')      // This while loop will output one binary number at a time.
 	{                                     // A new line character seperates each binary number.
